@@ -1,0 +1,22 @@
+export default [
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food1.jpg',
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food2.jpg',
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food3.jpg',
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food4.jpg',
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food5.jpg',
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food6.jpg',
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food7.jpg',
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food8.jpg',
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food9.jpg',
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food10.jpg',
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food11.jpg',
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food12.jpg',
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food13.jpg',
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food14.jpg',
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food15.jpg',
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food16.jpg',
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food17.jpg',
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food18.jpg',
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food19.jpg',
+  'https://s3-us-west-1.amazonaws.com/waitonme/photos/food20.jpg'
+];
