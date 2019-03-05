@@ -16,7 +16,8 @@
     "seed": "node database/seed.js",
     "test": "jest",
     "test-watch": "jest --watch --coverage --colors --verbose",
-    "node-server": "node database/seed.js; node server/index.js"
+    "node-server": "node database/seed.js; node server/index.js",
+    "seed-psql": "node ./database/generateRestaurants.js && node ./database/generatePhotos.js && psql -a -f ./database/schema.sql"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.14",
@@ -31,6 +32,7 @@
     "moment": "^2.24.0",
     "mysql": "^2.16.0",
     "mysql2": "^1.6.5",
+    "pg": "^7.8.1",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "sequelize": "^4.42.0",

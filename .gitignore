@@ -28,5 +28,6 @@ database/config.js
 tests/__snapshots__/
 
 database/photos.csv
+database/restaurants.csv
 
-photos
+photos/
