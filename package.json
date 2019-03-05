@@ -17,7 +17,8 @@
     "test": "jest",
     "test-watch": "jest --watch --coverage --colors --verbose",
     "node-server": "node database/seed.js; node server/index.js",
-    "seed-psql": "node ./database/generateRestaurants.js && node ./database/generatePhotos.js && psql -a -f ./database/schema.sql"
+    "seed-psql": "node ./database/generateRestaurants.js && node ./database/generatePhotos.js && psql -a -f ./database/schema.sql",
+    "seed-mongo": "mongoimport --db photos --collection restaurants --type csv --headerline --file /Users/jessicamadamba/Desktop/SDC/photos-module/database/restaurants.csv && mongoimport --db photos --collection photos --type csv --headerline --file /Users/jessicamadamba/Desktop/SDC/photos-module/database/photos.csv"
   },
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.14",
