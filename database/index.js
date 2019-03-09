@@ -1,50 +1,25 @@
-const Sequelize = require('sequelize');
-const {
-  username,
-  password,
-} = require('./config');
+const { Pool } = require('pg');
+const { user, password } = require('./config');
 
-const sequelize = new Sequelize('restaurants', username, password, {
-  host: '172.17.0.2',
-  port: '3306',
-  dialect: 'mysql',
+const pool = new Pool({
+  user: user,
+  host: 'localhost',
+  database: 'photos',
+  password: password,
+  port: 5432
 });
 
-const Photos = sequelize.define('photos', {
-  id: {
-    type: Sequelize.INTEGER,
-    autoIncrement: true,
-    allowNull: false,
-    primaryKey: true,
-  },
-  restaurant_id: {
-    type: Sequelize.INTEGER,
-    allowNull: false,
-  },
-  image_url: {
-    type: Sequelize.STRING,
-  },
-  caption: {
-    type: Sequelize.STRING,
-  },
-  date_posted: {
-    type: Sequelize.DATE,
-  },
-  username: {
-    type: Sequelize.STRING,
-  },
-  hover_data: {
-    type: Sequelize.STRING,
-  },
-});
+pool.connect()
 
+const findPhotos = (id, callback) => {
+  const queryString = `SELECT * FROM photos WHERE restaurant_id = ${id}`;
+  pool.query(queryString, (err, photos) => {
+    if (err) {
+      callback(err);
+      return;
+    }
+    callback(null, photos);
+  })
+}
 
-const findPhotos = id => Photos.findAll({
-  where: {
-    restaurant_id: id,
-  },
-});
-
-module.exports = {
-  findPhotos,
-};
+module.exports = { findPhotos };
