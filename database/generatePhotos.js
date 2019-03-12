@@ -45,7 +45,7 @@ let k = 1;
 let photo_id = 1;
 function generateRecord(restaurant_id) {
   let photos = '';
-  let randomNum = Math.floor(Math.random() * 16);
+  let randomNum = Math.floor(Math.random() * 12) + 9;
 
   for (let j = 0; j < randomNum; j++) {
     let photo;
