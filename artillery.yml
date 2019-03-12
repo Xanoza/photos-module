@@ -1,0 +1,19 @@
+config:
+  target: 'http://localhost:8888'
+  http:
+    pool: 10 # All HTTP requests from all virtual users will be sent over the same 10 connections
+
+  # define load phases
+  phases:
+    - duration: 60 # load phase lasts 60 seconds
+      arrivalRate: 1000 # with 1000 new virtual users arriving at every second on average
+  processor: "./artilleryFunction.js"
+  # ensure:
+  #   maxErrorRate: 1
+
+## what the virtual users will be doing
+scenarios:
+  - flow:
+    - function: "generateRandomData"
+    - get:
+        url: "/api/photos/{{ id }}"

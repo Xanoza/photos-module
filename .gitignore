@@ -31,3 +31,5 @@ database/photos.csv
 database/restaurants.csv
 
 photos/
+
+nrLicenseKey.js
